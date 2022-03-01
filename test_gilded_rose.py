@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import unittest
 from approvaltests.approvals import verify
-import approvaltests
 
 from gilded_rose import Item, GildedRose
 
@@ -13,7 +12,6 @@ class GildedRoseTest(unittest.TestCase):
         quality = 0
         ret = self.updateQuality(name, sellIn, quality)
         verify(ret)
-        #CombinationApprovals.verifyAllCombinations(ret)
 
     def updateQuality(self, name, sellIn, qaulity):
         items = [Item(name, sellIn, qaulity)]
